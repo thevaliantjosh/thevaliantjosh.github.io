@@ -1,0 +1,39 @@
+:root {
+    --profile_background: linear-gradient(45deg, #535771, #010718E0);
+    --text_white: #e3dfdf
+}
+.page-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: var(--profile_background);
+    overflow: scroll;
+}
+
+h1, p{
+    color: var(--text_white);
+}
+
+.container {
+    width: 50rem;
+    height: 50rem;
+    margin: 1rem;
+}
+
+.title-row {
+    display: flex;
+    justify-content: center;
+}
+
+.title-column {
+
+}
+
+.about-row {
+    display: flex;
+    align-items: center;
+}

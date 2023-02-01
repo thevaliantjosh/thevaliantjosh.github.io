@@ -1,6 +1,7 @@
 :root {
     --profile_background: linear-gradient(45deg, #535771, #010718E0);
-    --text_white: #e3dfdf
+    --text_white: #e3dfdf;
+    --sidebar_gray: #494848;
 }
 .page-wrapper {
     position: fixed;
@@ -14,26 +15,48 @@
     overflow: scroll;
 }
 
-h1, p{
+h1, h2, p{
     color: var(--text_white);
 }
 
-.container {
-    width: 50rem;
-    height: 50rem;
+.page-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.content-container {
+    width: 75vw;
+    height: 100vh;
     margin: 1rem;
 }
 
 .title-row {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 .title-column {
-
+    font-size: 2rem;
 }
 
 .about-row {
     display: flex;
     align-items: center;
+}
+
+/*Sidebar CSS*/
+
+.sidebar {
+    /*position: fixed;*/
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--sidebar_gray);
 }

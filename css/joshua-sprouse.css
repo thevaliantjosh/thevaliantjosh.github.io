@@ -2,10 +2,15 @@
     --profile_background: linear-gradient(45deg, #535771, #010718E0);
     --text_white: #e3dfdf;
     --sidebar_gray: #494848;
-    --sidbar_border_gray: #676565A0
+    --sidebar_border_gray: #676565A0;
+    --sidebar_icon_border: #3d3b3c;
+    --sidbar_icon_background: #0000001A;
+    --sidebar_icon_circles: #FFFFFFDD;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 /*font-family: 'Raleway', sans-serif;*/
 /*font-family: 'Roboto Serif', serif;*/
 
@@ -74,7 +79,7 @@ p {
     /*align-items: center;*/
     justify-content: center;
     width: 20vw;
-    height: 100vh;
+    height: 100%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -84,19 +89,62 @@ p {
 
 .sidebar-row {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     max-width: 100%;
     height: 4rem;
-    margin: .25rem 0;
-    border: 1px solid var(--sidbar_border_gray);
+    margin: .25rem 0 0 0;
+    border: 2px solid var(--sidebar_border_gray);
     border-right: none;
     border-left: none;
 
+}
+
+.sidebar-row.no-border:nth-of-type(n+1) {
+    border-top: none;
 }
 
 .sidebar-column a {
     text-decoration: none;
     color: var(--text_white);
     font-family: 'Raleway', sans-serif
+}
+
+/*Sidebar Icon CSS*/
+/*.sidebar-row-icon {*/
+/*    position: absolute;*/
+/*    z-index: -100;*/
+/*}*/
+
+
+.sidebar-row-icon {
+    position: absolute;
+    padding: 1px;
+    width: 7rem;
+    height: 7rem;
+    top: 2rem;
+    left: 2rem;
+    border-radius: 50%;
+
+    /*border: 2px solid var(--sidebar_border_gray);*/
+}
+
+.sidebar-row-icon:hover {
+    background-color: var(--sidbar_icon_background);
+}
+
+.sidebar-column-icon {
+    margin: 1rem;
+    padding: 1px;
+}
+
+.circles {
+    height: 20px;
+    width: 20px;
+    margin: 1px;
+    background-color: var(--sidebar_icon_circles);
+    border-radius: 50%;
+    border: 1px solid var(--sidebar_icon_border);
+    display: inline-block;/*intended to allow the element to sit next to other elements*/
 }

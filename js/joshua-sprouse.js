@@ -8,6 +8,7 @@ $(function(){
     *
     *  */
 
+
     $('.sidebar-row-icon').mouseenter(function(){
         $(this).toggleClass("sidebar-row-icon-shrink", 500, "linear");
         $(".sidebar-column-icon").toggleClass("sidebar-column-icon-shrink");
@@ -19,8 +20,8 @@ $(function(){
     $('#sidebar-icon').on("click", function(){
         // alert("You clicked me!");//this works
 
-        $('.sidebar').toggleClass("sidebar-shrink", 500, "linear");
-        $('.sidebar-container').toggleClass("sidebar-row", 500, "linear");
+        $('.sidebar').toggleClass("sidebar-shrink", 1000, "linear");
+        $('.sidebar-container').toggle("fade");
 
     })
 })

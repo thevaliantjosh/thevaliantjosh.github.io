@@ -115,8 +115,8 @@ p {
     padding: 1px;
     width: 7rem;
     height: 7rem;
-    top: 2rem;
-    left: 2rem;
+    top: 0;
+    left: 0;
     border-radius: 50%;
 }
 
@@ -133,8 +133,8 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     padding: 1px;
     width: 5rem;
     height: 5rem;
-    top: 2rem;
-    left: 2rem;
+    top: 0;
+    left: 0;
     border-radius: 50%;
 }
 
@@ -168,9 +168,9 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     background-color: var(--sidebar_gray);
 }
 
-.sidebar-container {
-    display: none;
-}
+/*.sidebar-container-hide {*/
+/*    display: none;*/
+/*}*/
 
 .circles {
     height: 20px;

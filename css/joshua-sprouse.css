@@ -111,13 +111,6 @@ p {
     font-family: 'Raleway', sans-serif
 }
 
-/*Sidebar Icon CSS*/
-/*.sidebar-row-icon {*/
-/*    position: absolute;*/
-/*    z-index: -100;*/
-/*}*/
-
-
 .sidebar-row-icon {
     position: absolute;
     padding: 1px;
@@ -126,13 +119,19 @@ p {
     top: 2rem;
     left: 2rem;
     border-radius: 50%;
-
-    /*border: 2px solid var(--sidebar_border_gray);*/
 }
 
+/*Changing the color of the sidebar icon when hovered
+possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 .sidebar-row-icon:hover {
     background-color: var(--sidbar_icon_background);
 }
+
+/*Selecting the 3rd circle plus 6-9*/
+
+/*#circle3::after {*/
+/*    margin-left: 2rem;*/
+/*}*/
 
 .sidebar-column-icon {
     margin: 1rem;

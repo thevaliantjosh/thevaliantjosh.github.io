@@ -127,16 +127,33 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     background-color: var(--sidbar_icon_background);
 }
 
-/*Selecting the 3rd circle plus 6-9*/
+/*I think the solution is to add a class that shrinks, then remove the class*/
 
-/*#circle3::after {*/
-/*    margin-left: 2rem;*/
-/*}*/
+.sidebar-row-icon-shrink {
+    position: absolute;
+    padding: 1px;
+    width: 5rem;
+    height: 5rem;
+    top: 2rem;
+    left: 2rem;
+    border-radius: 50%;
+}
+
+.sidebar-column-icon-shrink {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 5rem;
+    margin: 1px;
+    padding: 1px;
+}
+
+
 
 .sidebar-column-icon {
     margin: 1rem;
     padding: 1px;
 }
+
 
 .circles {
     height: 20px;

@@ -9,8 +9,11 @@ $(function(){
     *  */
 
     $('.sidebar-row-icon').hover(function(){
-        $()
-        $('#circle3, #circle6, #circle7, #circle8, #circle9').toggle("fade");
+        $(this).toggleClass("sidebar-row-icon-shrink", 700, "linear");
+        $(".sidebar-column-icon").toggleClass("sidebar-column-icon-shrink");
+        $('#circle3, #circle6').toggle("drop", {direction: "left"}, "slow");
+        $('#circle7, #circle8').toggle("drop", {direction: "up" }, "slow");
+        $('#circle9').toggle("drop", {direction: "left"}, "slow");
     })
 
 })

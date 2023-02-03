@@ -45,7 +45,7 @@ p {
 .content-container {
     width: 75vw;
     height: 100vh;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 15rem;
 }
 
 .title-row {
@@ -73,13 +73,12 @@ p {
 /*Sidebar CSS*/
 
 .sidebar {
-    /*position: fixed;*/
+    position: fixed;
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
     justify-content: center;
     width: 20vw;
-    height: 100%;
+    height: 100vh;
     top: 0;
     right: 0;
     bottom: 0;
@@ -145,15 +144,33 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     max-width: 5rem;
     margin: 1px;
     padding: 1px;
+    left: 0;
 }
 
-
-
 .sidebar-column-icon {
+    display: flex;
+    flex-flow: wrap;
+    position: sticky;
     margin: 1rem;
     padding: 1px;
 }
 
+/*Shrinking the sidebar*/
+
+.sidebar-shrink {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 6.25rem;
+    height: 5.5rem;
+    top: 24rem;
+    background-color: var(--sidebar_gray);
+}
+
+.sidebar-container {
+    display: none;
+}
 
 .circles {
     height: 20px;

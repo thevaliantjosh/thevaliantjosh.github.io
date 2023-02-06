@@ -4,7 +4,7 @@
     --sidebar_gray: #494848;
     --sidebar_border_gray: #676565A0;
     --sidebar_icon_border: #3d3b3c;
-    --sidbar_icon_background: #0000001A;
+    --sidebar_icon_background: #0000001A;
     --sidebar_icon_circles: #FFFFFFDD;
 }
 
@@ -68,6 +68,8 @@ p {
 .about-row {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 25rem;
 }
 
 /*Sidebar CSS*/
@@ -84,6 +86,10 @@ p {
     bottom: 0;
     left: 0;
     background-color: var(--sidebar_gray);
+}
+
+.sidebar-container {
+    /*position: absolute;*/
 }
 
 .sidebar-row {
@@ -115,15 +121,19 @@ p {
     padding: 1px;
     width: 7rem;
     height: 7rem;
-    top: 0;
-    left: 0;
+    top: 5px;
+    left: 5px;
     border-radius: 50%;
 }
 
 /*Changing the color of the sidebar icon when hovered
 possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 .sidebar-row-icon:hover {
-    background-color: var(--sidbar_icon_background);
+    background-color: var(--sidebar_icon_background);
+}
+
+.sidebar-row-icon-shrink:hover {
+    background-color: var(--sidebar_icon_background);
 }
 
 /*I think the solution is to add a class that shrinks, then remove the class*/
@@ -133,8 +143,8 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     padding: 1px;
     width: 5rem;
     height: 5rem;
-    top: 0;
-    left: 0;
+    top: 5px;
+    left: 5px;
     border-radius: 50%;
 }
 
@@ -151,6 +161,8 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     display: flex;
     flex-flow: wrap;
     position: sticky;
+    justify-content: center;
+    align-items: center;
     margin: 1rem;
     padding: 1px;
 }
@@ -162,9 +174,10 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 6.25rem;
-    height: 5.5rem;
-    top: 24rem;
+    width: 6rem;
+    height: 6rem;
+    top: 0;
+    left: 0;
     background-color: var(--sidebar_gray);
 }
 

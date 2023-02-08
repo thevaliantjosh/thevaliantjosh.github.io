@@ -1,2 +1,1 @@
-# thevaliantjosh.github.io
-My Portfolio
+My Personal Portfolio

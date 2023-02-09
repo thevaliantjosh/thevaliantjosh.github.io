@@ -14,6 +14,46 @@
 /*font-family: 'Raleway', sans-serif;*/
 /*font-family: 'Roboto Serif', serif;*/
 
+/*NOTES ON MEDIA QUERIES
+*max-width query: What it means is
+    If(device width <= 768px){
+    //aka max-width that is allowed for the css to be applied to
+    //then do the following code
+})
+
+*min-width query:
+
+    if(device width >= 769px){
+    //aka min-width the device can be before the css is no longer applied
+    //then do the following code
+}
+*/
+
+/*For Screens smaller than 768px*/
+@media screen and (max-width:768px){
+    /*Container for the entire main content*/
+    .content-container {
+        display: flex;
+        flex-flow: column;
+        width: 75vw;
+        margin: 6rem;
+    }
+    /*Adjusting the about-row for smaller devices*/
+    .about-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+    }
+}
+/*For Screens larger than 768 aka: default*/
+@media screen and (min-width:769px){
+    .content-container {
+        width: 75vw;
+        height: 100vh;
+        margin: 1rem 1rem 1rem 15rem;
+    }
+}
 .page-wrapper {
     position: fixed;
     top: 0;
@@ -35,6 +75,8 @@ p {
     font-family: 'Raleway', sans-serif;
 }
 
+
+
 .page-container {
     display: flex;
     width: 100vw;
@@ -42,11 +84,7 @@ p {
 }
 
 
-.content-container {
-    width: 75vw;
-    height: 100vh;
-    margin: 1rem 1rem 1rem 15rem;
-}
+
 
 .title-row {
     display: flex;
@@ -88,9 +126,6 @@ p {
     background-color: var(--sidebar_gray);
 }
 
-.sidebar-container {
-    /*position: absolute;*/
-}
 
 .sidebar-row {
     display: flex;
@@ -105,6 +140,10 @@ p {
     border-left: none;
 
 }
+/*Hovering over the Sidebar Rows*/
+.sidebar-row:hover {
+    background-color: var(--sidebar_icon_background);
+}
 
 .sidebar-row.no-border:nth-of-type(n+1) {
     border-top: none;
@@ -116,13 +155,14 @@ p {
     font-family: 'Raleway', sans-serif
 }
 
+/*The Row for the Icon Expanded*/
 .sidebar-row-icon {
     position: absolute;
     padding: 1px;
-    width: 7rem;
-    height: 7rem;
-    top: 5px;
-    left: 5px;
+    width: 6rem;
+    height: 6rem;
+    top: .25rem;
+    left: .25rem;
     border-radius: 50%;
 }
 
@@ -138,13 +178,14 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 
 /*I think the solution is to add a class that shrinks, then remove the class*/
 
+/*The Row for Icon Shrunk*/
 .sidebar-row-icon-shrink {
     position: absolute;
     padding: 1px;
     width: 5rem;
     height: 5rem;
-    top: 5px;
-    left: 5px;
+    top: .26rem;
+    left: .26rem;
     border-radius: 50%;
 }
 
@@ -160,7 +201,7 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 .sidebar-column-icon {
     display: flex;
     flex-flow: wrap;
-    position: sticky;
+    /*position: sticky;*/
     justify-content: center;
     align-items: center;
     margin: 1rem;
@@ -186,8 +227,8 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 /*}*/
 
 .circles {
-    height: 20px;
-    width: 20px;
+    height: 1rem;
+    width: 1rem;
     margin: 1px;
     background-color: var(--sidebar_icon_circles);
     border-radius: 50%;

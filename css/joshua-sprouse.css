@@ -33,20 +33,13 @@
 
 /*For Screens smaller than 768px*/
 @media screen and (max-width:768px){
-/*Container for the entire page*/
-    .page-container {
-        position: relative;
-        display: flex;
-        flex-flow: column;
-        width: 100vw;
-        height: 100vh;
-        /*margin-left: 5rem;*/
-    }
+
+
 
     /*Container for the entire main content*/
     .content-container {
-        position: relative;
-        top: 1rem;
+        position: absolute;
+        top: 0;
         /*bottom: 0;*/
         left: 10rem;
         /*display: flex;*/
@@ -56,29 +49,18 @@
     }
 
 /*Title Row and column for smaller devices*/
-    .title-row {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        top: 1rem;
-        /*margin-bottom: 5rem;*/
-        margin-bottom: 5rem;
-
-        border: 2px solid var(--sidebar_icon_border)
-        /*align-items: center;*/
-        /*justify-content: center;*/
-    }
+/*    .title-row {*/
+/*        right: 0;*/
+/*        bottom: 0;*/
+/*        !*margin-bottom: 5rem;*!*/
+/*        margin-bottom: 5rem;*/
+/*        !*border: 2px solid var(--sidebar_icon_border)*!*/
+/*        !*align-items: center;*!*/
+/*        !*justify-content: center;*!*/
+/*    }*/
 
     .title-column {
-        /*position: absolute;*/
-
-        /*top: 5rem;*/
-        /*top: 1rem;*/
-        /*bottom: 1rem;*/
-        height: 5rem;
-        /*margin: 5rem;*/
-        font-size: 2em;
-        font-family: 'Roboto Serif', serif;
+        width: 29rem;
     }
 
     /*Adjusting the about-row for smaller devices*/
@@ -94,14 +76,14 @@
 }
 /*For Screens larger than 768 aka: default*/
 @media screen and (min-width:769px){
-    .page-container {
-        position: relative;
-        display: flex;
-        flex-flow: column;
-        width: 100vw;
-        height: 100vh;
-        margin-left: 5rem;
-    }
+    /*.page-container {*/
+    /*    position: relative;*/
+    /*    display: flex;*/
+    /*    flex-flow: column;*/
+    /*    width: 100vw;*/
+    /*    height: 100vh;*/
+    /*    margin-left: 5rem;*/
+    /*}*/
     .content-container {
         position: absolute;
         /*display: flex;*/
@@ -115,34 +97,34 @@
         height: 100vh;
         /*margin: 1rem 1rem 1rem 15rem;*/
     }
+/*Title-row for larger devices*/
+/*    .title-row {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        margin-bottom: 5rem;*/
+/*        top: 0;*/
+/*        left: 0;*/
+/*        !*align-items: center;*!*/
+/*        !*justify-content: center;*!*/
+/*    }*/
 
-    .title-row {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 3rem;
-        width: 75vw;
-        border: 2px solid var(--sidebar_icon_border)
-        /*align-items: center;*/
-        /*justify-content: center;*/
-    }
+    /*.title-column {*/
+    /*    !*position: absolute;*!*/
 
-    .title-column {
-        /*position: absolute;*/
-
-        /*top: 5rem;*/
-        /*top: 1rem;*/
-        /*bottom: 1rem;*/
-        margin-bottom: 1rem;
-        height: 5rem;
-        /*margin: 5rem;*/
-        font-size: 2em;
-        font-family: 'Roboto Serif', serif;
-    }
+    /*    !*top: 5rem;*!*/
+    /*    !*top: 1rem;*!*/
+    /*    !*bottom: 1rem;*!*/
+    /*    margin-bottom: 1rem;*/
+    /*    height: 5rem;*/
+    /*    !*margin: 5rem;*!*/
+    /*    font-size: 2em;*/
+    /*    font-family: 'Roboto Serif', serif;*/
+    /*}*/
 
 
     .about-row {
         position: absolute;
+        top: 20rem;
         /*top: 1rem;*/
         /*right: .5rem;*/
         /*display: flex;*/
@@ -166,6 +148,16 @@
     background-image: var(--profile_background);
     overflow: scroll;
 }
+/*Container for the entire page*/
+.page-container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    /*margin-left: 5rem;*/
+}
 
 h1, h2, p{
     color: var(--text_white);
@@ -177,7 +169,7 @@ p {
 }
 
 /*Font size and Family for the title-column*/
-.title-column:nth-last-child(even){
+.title-column:nth-of-type(even){
     font-size: 2em;
     font-family: 'Roboto Thin', serif;
 }
@@ -187,6 +179,29 @@ p {
     width: 15rem;
 }
 
+.title-row {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 13rem;
+    z-index: -1;
+    border: 2px solid var(--sidebar_icon_border);
+    background-color: var(--sidebar_icon_background)
+    /*width: 75vw;*/
+}
+
+.title-column {
+    display: flex;
+    justify-content: center;
+    width: 29rem;
+    font-size: 2em;
+    font-family: 'Roboto Serif', serif;
+}
 
 
 
@@ -206,6 +221,7 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
+    margin-right: 1rem;
     background-color: var(--sidebar_gray);
 }
 

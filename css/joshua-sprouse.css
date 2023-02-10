@@ -31,29 +31,125 @@
 
 /*For Screens smaller than 768px*/
 @media screen and (max-width:768px){
-    /*Container for the entire main content*/
-    .content-container {
+/*Container for the entire page*/
+    .page-container {
+        position: relative;
         display: flex;
         flex-flow: column;
-        width: 75vw;
-        margin: 6rem;
+        width: 100vw;
+        height: 100vh;
+        /*margin-left: 5rem;*/
     }
+
+    /*Container for the entire main content*/
+    .content-container {
+        position: relative;
+        top: 1rem;
+        /*bottom: 0;*/
+        left: 10rem;
+        /*display: flex;*/
+        /*flex-flow: column;*/
+        width: 75vw;
+        /*margin: 6rem;*/
+    }
+
+/*Title Row and column for smaller devices*/
+    .title-row {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        border: 2px solid var(--sidebar_icon_border)
+        /*align-items: center;*/
+        /*justify-content: center;*/
+    }
+
+    .title-column {
+        /*position: absolute;*/
+
+        /*top: 5rem;*/
+        /*top: 1rem;*/
+        /*bottom: 1rem;*/
+        margin-bottom: 1rem;
+        height: 5rem;
+        /*margin: 5rem;*/
+        font-size: 2em;
+        font-family: 'Roboto Serif', serif;
+    }
+
     /*Adjusting the about-row for smaller devices*/
     .about-row {
-        display: flex;
+        position: absolute;
+        /*display: flex;*/
         align-items: center;
         justify-content: center;
+        top: 10rem;
+        left: 5rem;
         width: 15rem;
     }
 }
 /*For Screens larger than 768 aka: default*/
 @media screen and (min-width:769px){
+    .page-container {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        width: 100vw;
+        height: 100vh;
+        margin-left: 5rem;
+    }
     .content-container {
+        position: relative;
+        /*display: flex;*/
+        /*flex-flow: column nowrap;*/
+        /*flex-wrap: nowrap;*/
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         width: 75vw;
         height: 100vh;
         margin: 1rem 1rem 1rem 15rem;
     }
+
+    .title-row {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        border: 2px solid var(--sidebar_icon_border)
+        /*align-items: center;*/
+        /*justify-content: center;*/
+    }
+
+    .title-column {
+        /*position: absolute;*/
+
+        /*top: 5rem;*/
+        /*top: 1rem;*/
+        /*bottom: 1rem;*/
+        margin-bottom: 1rem;
+        height: 5rem;
+        /*margin: 5rem;*/
+        font-size: 2em;
+        font-family: 'Roboto Serif', serif;
+    }
+
+
+    .about-row {
+        position: absolute;
+        /*top: 1rem;*/
+        /*right: .5rem;*/
+        /*display: flex;*/
+        align-items: center;
+        justify-content: center;
+        width: 25rem;
+        /*margin-left: 10rem;*/
+    }
 }
+
+/*Universal CSS*/
+
 .page-wrapper {
     position: fixed;
     top: 0;
@@ -75,40 +171,22 @@ p {
     font-family: 'Raleway', sans-serif;
 }
 
-
-
-.page-container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
-
-
-
-
-.title-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-column {
-    font-size: 2rem;
-    font-family: 'Roboto Serif', serif;
-}
-
+/*Font size and Family for the title-column*/
 .title-column:nth-last-child(even){
-    font-size: 2rem;
+    font-size: 2em;
     font-family: 'Roboto Thin', serif;
 }
 
-.about-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25rem;
+
+.about-column {
+    width: 15rem;
 }
+
+
+
+
+
+
 
 /*Sidebar CSS*/
 

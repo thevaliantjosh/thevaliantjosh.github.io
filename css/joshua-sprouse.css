@@ -60,7 +60,11 @@
 /*    }*/
 
    .title-row {
-       align-items: flex-end;
+       align-items: baseline;
+   }
+
+   .title-column {
+       font-size: 1em;
    }
 
     /*Adjusting the about-row for smaller devices*/
@@ -70,7 +74,7 @@
         /*align-items: center;*/
         /*justify-content: center;*/
         top: 20rem;
-        left: 5rem;
+        right: 5rem;
         width: 15rem;
     }
 }
@@ -87,21 +91,22 @@
         height: 100vh;
         /*margin: 1rem 1rem 1rem 15rem;*/
     }
-/*Title-row for larger devices*/
+/*Title-row and column for larger devices*/
     .title-row {
         align-items: center;
+    }
+
+    .title-column{
+        font-size: 1.5em;
     }
 
     .about-row {
         position: absolute;
         top: 20rem;
-        /*top: 1rem;*/
-        /*right: .5rem;*/
-        /*display: flex;*/
+        right: 5rem;
         align-items: center;
         justify-content: center;
         width: 25rem;
-        /*margin-left: 10rem;*/
     }
 }
 
@@ -164,7 +169,7 @@ p {
     display: flex;
     justify-content: center;
     width: 29rem;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
     font-family: 'Roboto Serif', serif;
 }
 
@@ -250,21 +255,22 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 /*The Row for Icon Shrunk*/
 .sidebar-row-icon-shrink {
     position: absolute;
+    display: flex;
+    flex-flow: column wrap;
     padding: 1px;
-    width: 5rem;
-    height: 5rem;
-    top: .26rem;
-    left: .26rem;
+    max-width: 4rem;
+    max-height: 4rem;
+    top: 10px;
+    left: 10px;
     border-radius: 50%;
 }
 
 .sidebar-column-icon-shrink {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 5rem;
-    margin: 1px;
-    padding: 1px;
-    left: 0;
+    width: 80%;
+    height: 80%;
+    /*margin: 1px;*/
+    /*padding: 1px;*/
+    /*left: 0;*/
 }
 
 .sidebar-column-icon {

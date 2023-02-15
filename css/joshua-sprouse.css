@@ -37,16 +37,16 @@
 
 
     /*Container for the entire main content*/
-    .content-container {
-        position: absolute;
-        top: 0;
-        /*bottom: 0;*/
-        left: 10rem;
-        /*display: flex;*/
-        /*flex-flow: column;*/
-        width: 75vw;
-        /*margin: 6rem;*/
-    }
+    /*.content-container {*/
+    /*    position: absolute;*/
+    /*    top: 0;*/
+    /*    !*bottom: 0;*!*/
+    /*    left: 10rem;*/
+    /*    !*display: flex;*!*/
+    /*    !*flex-flow: column;*!*/
+    /*    width: 75vw;*/
+    /*    !*margin: 6rem;*!*/
+    /*}*/
 
 /*Title Row and column for smaller devices*/
 /*    .title-row {*/
@@ -68,29 +68,20 @@
    }
 
     /*Adjusting the about-row for smaller devices*/
-    .about-row {
-        position: absolute;
-        /*display: flex;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
-        top: 20rem;
-        right: 5rem;
-        width: 15rem;
-    }
+    /*.about-row {*/
+    /*    position: absolute;*/
+    /*    !*display: flex;*!*/
+    /*    !*align-items: center;*!*/
+    /*    !*justify-content: center;*!*/
+    /*    top: 20rem;*/
+    /*    right: 5rem;*/
+    /*    width: 15rem;*/
+    /*}*/
 }
 /*For Screens larger than 768 aka: default*/
 @media screen and (min-width:769px){
 
-    .content-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 10rem;
-        width: 75vw;
-        height: 100vh;
-        /*margin: 1rem 1rem 1rem 15rem;*/
-    }
+
 /*Title-row and column for larger devices*/
     .title-row {
         align-items: center;
@@ -100,14 +91,14 @@
         font-size: 1.5em;
     }
 
-    .about-row {
-        position: absolute;
-        top: 20rem;
-        right: 5rem;
-        align-items: center;
-        justify-content: center;
-        width: 25rem;
-    }
+    /*.about-row {*/
+    /*    position: absolute;*/
+    /*    top: 20rem;*/
+    /*    right: 5rem;*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*    width: 25rem;*/
+    /*}*/
 }
 
 /*Universal CSS*/
@@ -173,6 +164,21 @@ p {
     font-family: 'Roboto Serif', serif;
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 65vw;
+    height: 100vh;
+    justify-content: space-between;
+    margin: 20rem 1rem 10rem 16rem;
+    /*margin: 1rem 1rem 1rem 15rem;*/
+}
+
+.military-experience-row-title {
+
+}
+
 /*.title-column:nth-of-type(even){*/
 /*    font-family: 'Roboto Thin', sans-serif;*/
 /*}*/
@@ -190,7 +196,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20vw;
+    width: 18vw;
     height: 100vh;
     top: 0;
     right: 0;
@@ -268,9 +274,6 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 .sidebar-column-icon-shrink {
     width: 80%;
     height: 80%;
-    /*margin: 1px;*/
-    /*padding: 1px;*/
-    /*left: 0;*/
 }
 
 .sidebar-column-icon {

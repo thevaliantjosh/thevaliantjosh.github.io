@@ -14,8 +14,8 @@ $(function(){
         $('#circle3, #circle6').toggle("drop", {direction: "left"}, "fast");
         $('#circle7, #circle8').toggle("drop", {direction: "up" }, "fast");
         $('#circle9').toggle("drop", {direction: "left"}, "fast")
-        // $('.sidebar').toggleClass("sidebar-shrink", 1000, "linear");
-        // $('.sidebar-container').toggle("fade");
+        $('.sidebar').toggleClass("sidebar-shrink", 1000, "linear");
+        $('.sidebar-container').toggle("fade");
 
     })
 })

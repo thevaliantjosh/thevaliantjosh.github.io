@@ -289,7 +289,6 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 .sidebar-column-icon-shrink {
     position: sticky !important;
     display: flex !important;
-    /*flex-direction: column !important;*/
     max-width: 60% !important;
     /*flex-flow: nowrap !important;*/
     /*margin: 10px !important;*/
@@ -316,9 +315,9 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     justify-content: center;
     width: 6rem;
     height: 6rem;
-    top: 0;
-    left: 0;
-    background-color: var(--sidebar_gray);
+    top: 5px;
+    left: 5px;
+    background-color: black;
 }
 
 /*.sidebar-container-hide {*/

@@ -123,6 +123,7 @@ h1, h2, h3, p, li{
 
 h1, h2, h3 {
     font-family: 'Roboto Serif', serif;
+    color: black;
 }
 
 p, li {
@@ -142,7 +143,7 @@ strong {
     flex-direction: column;
     align-items: center;
     max-width: 100rem;
-    height: 100vh;
+    max-height: fit-content;
     justify-content: space-between;
     margin: 1rem 0 1rem 10rem;
     border: 2px solid blue;
@@ -187,20 +188,68 @@ strong {
     width: 100%;
 }
 
-.title-column {
+/*Inside Main Content Container CSS*/
+
+.title-column > h1, h2 {
     padding: 5px;
+    color: var(--text_white);
     /*margin: 1rem;*/
 }
 
+.military-experience-row-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 5rem 1rem 2rem 1rem;
+    padding: 1rem;
+    max-width: 32rem;
+    max-height: 32rem;
+    border: 2px solid red;
+}
 
 .military-experience-column-title {
+    display: flex;
+    width: 100%;
     margin: 1rem 1rem 2rem 1rem;
+    font-size: 1.5em;
+    border: 2px solid green;
 
 }
 
-.military-experience-column-title > h1 {
-    color: black;
+.experience-row-me-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 1rem 2rem 1rem;
 }
+
+.professional-row-header1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 5rem 1rem 2rem 1rem;
+    padding: 1rem;
+    max-width: 40rem;
+    max-height: 32rem;
+    border: 2px solid red;
+}
+
+.prof-column-header {
+    display: flex;
+    width: 100%;
+    margin: 1rem;
+    font-size: 1.5rem;
+    border: 2px solid green;
+}
+
+
+
+
+/*.military-experience-column-title > h1 {*/
+/*    color: black;*/
+/*}*/
 
 
 /*Sidebar CSS*/

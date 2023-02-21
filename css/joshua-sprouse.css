@@ -135,6 +135,10 @@ strong {
     color: black;
 }
 
+ul > li {
+    line-height: 2em;
+}
+
 /*Font size and Family for the title-column*/
 
 /*Container for all the main content for the entire page*/
@@ -199,19 +203,21 @@ strong {
 .military-experience-row-title {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     margin: 5rem 1rem 2rem 1rem;
     padding: 1rem;
-    max-width: 32rem;
+    max-width: 40rem;
     max-height: 32rem;
     border: 2px solid red;
 }
 
 .military-experience-column-title {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    margin: 1rem 1rem 2rem 1rem;
+    margin: 1rem 1rem 3rem 1rem;
     font-size: 1.5em;
     border: 2px solid green;
 
@@ -220,9 +226,33 @@ strong {
 .experience-row-me-details {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 1rem 1rem 2rem 1rem;
+    width: 90%;
+    height: fit-content;
+    border: 2px solid red;
+
 }
+
+
+
+.me-details-column-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 95%;
+    border: 2px solid green;
+}
+
+.me-details-column-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 2rem;
+    width: 100%;
+}
+
 
 .professional-row-header1 {
     display: flex;
@@ -243,6 +273,44 @@ strong {
     font-size: 1.5rem;
     border: 2px solid green;
 }
+
+.prof-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    max-height: fit-content;
+    border: 2px solid red;
+
+}
+
+.prof-row-title1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    margin: 1rem 0;
+    border: 2px solid green;
+
+}
+
+.prof-column-title1 {
+    padding: 1rem;
+    width: 100%;
+}
+
+.prof-row-details1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.prof-column-details1 {
+    width: 95%;
+    padding: 1rem;
+}
+
 
 
 

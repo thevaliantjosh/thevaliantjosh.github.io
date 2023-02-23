@@ -40,9 +40,9 @@
    .title-row {
        display: flex;
        flex-direction: column;
-       align-items: flex-start;
+       align-items: flex-end;
        justify-content: flex-end;
-       width: 100%;
+       width: 90%;
        /*margin: 2rem 0 1rem 0;*/
        border: 1px solid red;
 
@@ -88,11 +88,12 @@
         /*display: flex;*/
         /*flex-direction: column;*/
         /*justify-content: center;*/
-        width: fit-content;
+        width: 4rem;
         height: 3rem;
-        top: 1px;
+        top: 2px;
         left: 1px;
         background-color: black;
+        /*border: 2px solid red;*/
     }
 
 
@@ -103,8 +104,12 @@
 @media screen and (min-width:769px){
 
     .title-row {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        width: 85%;
         padding: 1rem 1rem 1rem 1rem;
+        border: 2px solid green;
     }
 
 
@@ -115,9 +120,9 @@
 
     .sidebar {
         position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
         width: 10rem;
         height: 100vh;
         top: 0;
@@ -131,13 +136,13 @@
 
     .sidebar-shrink {
         position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 4rem;
-        height: 4rem;
-        top: 1px;
-        left: 1px;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        width: 5rem;
+        height: 5rem;
+        top: 0;
+        left: 0;
         background-color: black;
     }
 
@@ -394,7 +399,7 @@ ul > li {
 
 
 .sidebar-container {
-    margin-top: 2rem;
+    margin-top: 10rem;
 }
 
 .sidebar-row {
@@ -426,7 +431,23 @@ ul > li {
 }
 
 /*The Row for the Icon Expanded*/
+
+.sidebar-container-icon {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid white;
+}
+
 .sidebar-row-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     padding: 1px;
     width: 6rem;
@@ -451,21 +472,26 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 /*The Row for Icon Shrunk*/
 .sidebar-row-icon-shrink {
     position: sticky;
+    max-width: 100%;
+    max-heiht: 5rem;
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
+    flex-flow: wrap;
     padding: 1px;
-    max-width: 5rem;
-    max-height: 5rem;
-    top: 10px;
-    left: 10px;
+    /*max-width: 5rem;*/
+    /*max-height: 5rem;*/
+
     border-radius: 50%;
+    border: 1px solid green;
 }
 
 .sidebar-column-icon-shrink {
     position: sticky !important;
     display: flex !important;
-    max-width: 60% !important;
+    flex-flow: wrap;
+    max-width: 100% !important;
+    max-height: fit-content;
+    border: 1px solid red;
     /*flex-flow: nowrap !important;*/
     /*margin: 10px !important;*/
 

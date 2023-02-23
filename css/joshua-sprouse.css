@@ -38,38 +38,63 @@
 
 
    .title-row {
-        margin: 2rem 0 1rem 0;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
        justify-content: flex-end;
-
+       width: 100%;
+       /*margin: 2rem 0 1rem 0;*/
+       border: 1px solid red;
 
    }
 
    .title-column {
-       font-size: 1.5em;
-       max-width: 25rem;
+       display: flex;
+       align-items: flex-end;
+       justify-content: flex-end;
+       align-content: flex-end;
+       width: 90%;
+       font-size: 1.25em;
+       max-width: fit-content;
        margin: 1rem 1rem 0 3rem;
        border: 1px solid white;
    }
 
-    .about-column {
-        float: right;
-        width: 80%;
-        height: 100%;
-        font-size: 1.5em;
-        line-height: 1.5em;
-        padding: 2rem;
-        margin: 2rem;
-        border: 2px solid red;
-
-
-    }
-
     /*Need to Change the side bar shrunken size on smaller screens*/
     /*Sidebar Shrunken for smaller devices*/
-    .sidebar-shrink {
-        width: 5rem;
-        height: 5rem;
+
+
+    /*Sidebar CSS*/
+
+    .sidebar {
+        position: fixed;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        width: fit-content;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: var(--sidebar_gray);
     }
+
+
+
+    /*Shrinking the sidebar*/
+
+    .sidebar-shrink {
+        position: fixed;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        width: fit-content;
+        height: 3rem;
+        top: 1px;
+        left: 1px;
+        background-color: black;
+    }
+
 
 }/*End of Small Media Screens*/
 
@@ -87,17 +112,33 @@
         font-size: 1.5em;
     }
 
-    .about-column {
-        float: right;
-        width: 60%;
-        height: 100%;
-        font-size: 2em;
-        line-height: 1.5em;
-        padding: 2rem;
-        margin: 2rem;
-        border: 2px solid red;
+
+    .sidebar {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 10rem;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: var(--sidebar_gray);
+    }
 
 
+    /*Shrinking the sidebar*/
+
+    .sidebar-shrink {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        top: 1px;
+        left: 1px;
+        background-color: black;
     }
 
 }/*End of Large Media Screens*/
@@ -156,21 +197,38 @@ ul > li {
 }
 
 .about-row {
-    max-width: 100%;
-    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 95%;
+    max-height: fit-content;
     margin-bottom: 1rem;
     padding: 1rem;
     border: 2px solid green;
 
 }
 
+.about-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    font-size: 2em;
+    line-height: 1.5em;
+    padding: 2rem;
+    margin: 2rem;
+    border: 2px solid red;
+
+
+}
 
 
 .title-container {
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    justify-content: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    position: fixed;
+    /*justify-content: center;*/
     top: 0;
     right: 0;
     width: 100vw;
@@ -182,15 +240,15 @@ ul > li {
     background-color: black;
 }
 
-.title-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    /*margin-top: 1rem;*/
-    width: 100%;
-}
+/*.title-row {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding: 1rem;*/
+/*    !*margin-top: 1rem;*!*/
+/*    width: 100%;*/
+/*}*/
 
 /*Inside Main Content Container CSS*/
 
@@ -233,25 +291,39 @@ ul > li {
 }
 
 
-
-.me-details-column-title {
+/*CSS for all the details column titles*/
+.details-column-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     margin: 1rem 0;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 0;
     width: 95%;
     border: 2px solid green;
 }
 
-.me-details-column-list {
+/*CSS for all of the column lists*/
+
+.details-column-list {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 2rem;
-    width: 100%;
+    margin-left: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+    height: fit-content;
+    border: 2px solid green;
 }
+
+/*.me-details-column-list {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-end;*/
+/*    margin-left: 2rem;*/
+/*    padding: 1rem;*/
+/*    width: 100%;*/
+/*}*/
 
 
 .professional-row-header1 {
@@ -284,27 +356,27 @@ ul > li {
 
 }
 
-.prof-row-title1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 95%;
-    margin: 1rem 0;
-    border: 2px solid green;
+/*.prof-row-title1 {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*    width: 95%;*/
+/*    margin: 1rem 0;*/
+/*    border: 2px solid green;*/
 
-}
+/*}*/
 
 .prof-column-title1 {
     padding: 1rem;
     width: 100%;
 }
 
-.prof-row-details1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-}
+/*.prof-row-details1 {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-end;*/
+/*    width: 100%;*/
+/*}*/
 
 .prof-column-details1 {
     width: 95%;
@@ -320,23 +392,9 @@ ul > li {
 /*}*/
 
 
-/*Sidebar CSS*/
-
-.sidebar {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 10rem;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: var(--sidebar_gray);
-}
 
 .sidebar-container {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .sidebar-row {
@@ -369,12 +427,12 @@ ul > li {
 
 /*The Row for the Icon Expanded*/
 .sidebar-row-icon {
-    position: absolute;
+    position: sticky;
     padding: 1px;
     width: 6rem;
     height: 6rem;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
     border-radius: 50%;
 }
 
@@ -392,8 +450,9 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 
 /*The Row for Icon Shrunk*/
 .sidebar-row-icon-shrink {
-    position: absolute;
+    position: sticky;
     display: flex;
+    justify-content: center;
     flex-flow: column wrap;
     padding: 1px;
     max-width: 5rem;
@@ -423,19 +482,7 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     padding: 2px;
 }
 
-/*Shrinking the sidebar*/
 
-.sidebar-shrink {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 6rem;
-    height: 6rem;
-    top: 5px;
-    left: 5px;
-    background-color: black;
-}
 
 /*.sidebar-container-hide {*/
 /*    display: none;*/

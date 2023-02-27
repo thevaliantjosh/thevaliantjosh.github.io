@@ -109,7 +109,7 @@
         align-items: center;
         width: 85%;
         padding: 1rem 1rem 1rem 1rem;
-        border: 2px solid green;
+        /*border: 2px solid green;*/
     }
 
 
@@ -438,22 +438,16 @@ ul > li {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    width: 6rem;
+    width: 10rem;
+    height: 10rem;
     top: 0;
     left: 0;
-    border: 2px solid white;
+    /*border: 2px solid white;*/
 }
 
 .sidebar-row-icon {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    position: sticky;
-    padding: 1px;
-    width: 6rem;
-    height: 6rem;
-    top: 0;
-    left: 0;
+    width: 80%;
+    height: 80%;
     border-radius: 50%;
 }
 
@@ -473,26 +467,23 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 .sidebar-row-icon-shrink {
     position: sticky;
     max-width: 100%;
-    max-heiht: 5rem;
+    height: fit-content;
     display: flex;
     justify-content: center;
     flex-flow: wrap;
-    padding: 1px;
-    /*max-width: 5rem;*/
-    /*max-height: 5rem;*/
-
     border-radius: 50%;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 }
 
 .sidebar-column-icon-shrink {
     position: sticky !important;
     display: flex !important;
     justify-content: center;
+    align-items: center;
     flex-flow: wrap;
-    max-width: 100% !important;
-    max-height: fit-content;
-    border: 1px solid red;
+    width: 40% !important;
+    height: fit-content;
+    /*border: 1px solid red;*/
     /*flex-flow: nowrap !important;*/
     /*margin: 10px !important;*/
 
@@ -504,9 +495,8 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     flex-flow: wrap;
     justify-content: center;
     align-items: center;
-    width: 75%;
-    margin: 1rem;
-    padding: 2px;
+    width: 50%;
+    margin: 2rem;
 }
 
 

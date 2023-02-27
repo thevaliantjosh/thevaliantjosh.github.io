@@ -438,16 +438,16 @@ ul > li {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    width: 100%;
+    width: 6rem;
     top: 0;
     left: 0;
     border: 2px solid white;
 }
 
 .sidebar-row-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
     position: sticky;
     padding: 1px;
     width: 6rem;
@@ -488,6 +488,7 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 .sidebar-column-icon-shrink {
     position: sticky !important;
     display: flex !important;
+    justify-content: center;
     flex-flow: wrap;
     max-width: 100% !important;
     max-height: fit-content;

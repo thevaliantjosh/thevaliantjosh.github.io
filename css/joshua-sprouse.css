@@ -207,7 +207,7 @@ ul > li {
     align-items: center;
     max-width: 95%;
     max-height: fit-content;
-    margin-bottom: 1rem;
+    margin: 15rem 1rem;
     padding: 1rem;
     border: 2px solid green;
 
@@ -313,7 +313,7 @@ ul > li {
 .details-column-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-left: 1rem;
     padding: 1rem;
     max-width: 100%;

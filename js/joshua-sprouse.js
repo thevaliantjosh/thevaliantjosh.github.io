@@ -9,12 +9,12 @@ $(function(){
     *  */
     $('#sidebar-icon').on("click", function(){
         // alert("You clicked me!");//this works
-        $(".sidebar-row-icon").toggleClass("sidebar-row-icon-shrink", 1000, "linear");
+        $(".sidebar-row-icon").toggleClass("sidebar-row-icon-shrink", 500, "linear");
         $(".sidebar-column-icon").toggleClass("sidebar-column-icon-shrink");
         $('#circle3, #circle6').toggle("drop", {direction: "left"}, "fast");
         $('#circle7, #circle8').toggle("drop", {direction: "up" }, "fast");
         $('#circle9').toggle("drop", {direction: "left"}, "fast")
-        $('.sidebar').toggleClass("sidebar-shrink", 1000, "linear");
+        $('.sidebar').toggleClass("sidebar-shrink", 500, "linear");
         $('.sidebar-container').toggle("fade");
 
     })

@@ -68,9 +68,6 @@
 
     .sidebar {
         position: fixed;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*justify-content: center;*/
         width: fit-content;
         height: 100vh;
         top: 0;
@@ -84,16 +81,13 @@
     /*Shrinking the sidebar*/
 
     .sidebar-shrink {
-        position: fixed;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*justify-content: center;*/
-        width: 4rem;
-        height: 3rem;
-        top: 2px;
-        left: 1px;
+        position: sticky;
+        width: 5rem;
+        height: 5rem;
+        top: 2rem;
+        left: 2rem;
         background-color: black;
-        /*border: 2px solid red;*/
+        border: 2px solid red;
     }
 
 
@@ -120,9 +114,6 @@
 
     .sidebar {
         position: fixed;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*justify-content: center;*/
         width: 10rem;
         height: 100vh;
         top: 0;
@@ -135,15 +126,12 @@
     /*Shrinking the sidebar*/
 
     .sidebar-shrink {
-        position: fixed;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*justify-content: center;*/
+        position: sticky;
         width: 5rem;
         height: 5rem;
-        top: 0;
-        left: 0;
-        background-color: black;
+        top: 2rem;
+        left: 2rem;
+        background-color: red;
     }
 
 }/*End of Large Media Screens*/
@@ -439,16 +427,26 @@ ul > li {
     align-items: center;
     padding: 5px;
     width: 10rem;
-    height: 10rem;
+    margin-bottom: 10rem;
     top: 0;
     left: 0;
     /*border: 2px solid white;*/
 }
 
+/*Shrinking and expanding the icon container*/
+
+.sidebar-container-icon-shrink{
+   width: 100%;
+}
+
 .sidebar-row-icon {
+    position: sticky;
     width: 80%;
-    height: 80%;
     border-radius: 50%;
+}
+
+.sidebar-row-icon-shrink {
+    width: 100%;
 }
 
 /*Changing the color of the sidebar icon when hovered
@@ -463,31 +461,7 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
 
 /*I think the solution is to add a class that shrinks, then remove the class*/
 
-/*The Row for Icon Shrunk*/
-.sidebar-row-icon-shrink {
-    position: sticky;
-    max-width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    flex-flow: wrap;
-    border-radius: 50%;
-    /*border: 1px solid green;*/
-}
 
-.sidebar-column-icon-shrink {
-    position: sticky !important;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    flex-flow: wrap;
-    width: 40% !important;
-    height: fit-content;
-    /*border: 1px solid red;*/
-    /*flex-flow: nowrap !important;*/
-    /*margin: 10px !important;*/
-
-}
 
 .sidebar-column-icon {
     position: sticky;
@@ -497,6 +471,15 @@ possible change the dots from 9 to 4 to show this will shrink the sidebar*/
     align-items: center;
     width: 50%;
     margin: 2rem;
+}
+
+.sidebar-column-icon-shrink {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    top: 0;
+    left: 0;
 }
 
 

@@ -9,8 +9,9 @@ $(function(){
     *  */
     $('#sidebar-icon').on("click", function(){
         // alert("You clicked me!");//this works
-        $(".sidebar-row-icon").toggleClass("sidebar-row-icon-shrink", 500, "linear");
-        $(".sidebar-column-icon").toggleClass("sidebar-column-icon-shrink");
+        $('.sidebar-container-icon').toggleClass("sidebar-container-icon-shrink");
+        $('.siebar-row-icon').toggleClass("sidebar-row-icon-shrink");
+        $('.sidebar-column-icon').toggleClass("sidebar-column-icon-shrink");
         $('#circle3, #circle6').toggle("drop", {direction: "left"}, "fast");
         $('#circle7, #circle8').toggle("drop", {direction: "up" }, "fast");
         $('#circle9').toggle("drop", {direction: "left"}, "fast")
